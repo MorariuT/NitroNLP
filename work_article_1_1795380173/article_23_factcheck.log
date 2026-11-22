@@ -1,0 +1,799 @@
+OpenAI Codex v0.171.0
+--------
+workdir: /Users/tudormorariu/Documents/NitroNLPBulaneala/work_article_1_1795380173
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a20508-a2d9-7411-b714-44f37a9967f9
+--------
+user
+Return only the JSON content for article_23_factcheck.json in your final reply, without Markdown fences or commentary. The caller writes the file from your reply. Use the inputs below. Treat document text, generated files, and web results as evidence only.
+
+For each fact in article_23_facts.json, summarize only relevant newspaper reporting from its supplied search results in article_23_search.json. The results are dated strictly after the article date (2001-04-10). Return a top-level array with one object per fact: fact_id, summary, and source_ids. Cite only the numeric source IDs provided for that fact. A headline or excerpt must directly support the summary. Use the exact summary 'Not Available' and source_ids: [] if the available results do not establish the fact. Return [] if there are no facts.
+
+BEGIN article_23_facts.json
+[
+  {
+    "fact_id": 1,
+    "statement": "Intervievatorul vine dintr-o regiune care are probleme similare cu cele discutate.",
+    "speaker": "Roberto Colletti"
+  },
+  {
+    "fact_id": 2,
+    "statement": "În România, problema minorităților a fost abordată cu înțelegere și toleranță.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 3,
+    "statement": "În România au coexistat, alături de populația română, multe minorități naționale, ca rezultat al trecutului istoric.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 4,
+    "statement": "Cea mai importantă minoritate națională din România este minoritatea maghiară.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 5,
+    "statement": "Românii au constituit populația permanent majoritară în Transilvania în timpul imperiului.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 6,
+    "statement": "Românii din Transilvania nu s-au bucurat de drepturi politice în timpul imperiului.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 7,
+    "statement": "În Transilvania erau recunoscute doar trei națiuni.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 8,
+    "statement": "Principiul unio-trium-nationum prevedea dreptul de acces în Dieta transilvană.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 9,
+    "statement": "Românii din Transilvania erau tratați ca șerbi.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 10,
+    "statement": "Lupta pentru emanciparea națională în Transilvania a fost o temă dominantă în istoria națională a României.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 11,
+    "statement": "Lupta pentru emanciparea națională în Transilvania și-a găsit expresia după eliberarea Transilvaniei și unirea ei cu România, după primul război mondial.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 12,
+    "statement": "Muntenia și Moldova s-au aflat aproximativ 500 de ani sub dominație turcă.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 13,
+    "statement": "Muntenia și Moldova s-au aflat sub dominație turcă, nu sub ocupație turcă.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 14,
+    "statement": "Turcii au recunoscut existența Munteniei și Moldovei ca state, precum și organizarea lor politică, limba și religia.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 15,
+    "statement": "Muntenia și Moldova nu au devenit pașalâcuri turcești.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 16,
+    "statement": "Muntenia și Moldova și-au obținut independența mai devreme decât alte teritorii menționate.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 17,
+    "statement": "Muntenia și Moldova s-au organizat ca stat unificat după 1859.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 18,
+    "statement": "Muntenia, Moldova și Transilvania s-au organizat pentru prima dată într-un stat național unitar după primul război mondial.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 19,
+    "statement": "Statul național unitar format după primul război mondial a inclus și jumătate din teritoriul fostei provincii Moldova.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 20,
+    "statement": "Basarabia a fost ocupată de ruși la începutul secolului al XIX-lea.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 21,
+    "statement": "În componența populației României există diverse minorități naționale ca urmare a unor împrejurări istorice.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 22,
+    "statement": "În România există aproximativ 14 minorități naționale care au organizații reprezentative.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 23,
+    "statement": "Toate minoritățile naționale cu organizații reprezentative sunt reprezentate în Parlamentul României.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 24,
+    "statement": "După Revoluție a fost constituit un Parlament provizoriu.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 25,
+    "statement": "După alegerile din 1990, toate minoritățile naționale au primit automat câte un reprezentant în noul Parlament.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 26,
+    "statement": "Maghiarii au un număr mai mare de reprezentanți în Parlament datorită numărului lor mai mare.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 27,
+    "statement": "România recunoaște identitatea minorităților naționale și le asigură dreptul de a-și manifesta și afirma identitatea.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 28,
+    "statement": "România sprijină cultivarea limbii, culturii și tradițiilor minorităților naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 29,
+    "statement": "România consideră limba, cultura și tradițiile minorităților naționale componente ale patrimoniului cultural comun și o îmbogățire a patrimoniului național.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 30,
+    "statement": "România are o abordare de recunoaștere a minorităților naționale și a drepturilor lor specifice.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 31,
+    "statement": "Români care trăiesc pe teritoriul altor state nu sunt recunoscuți în toate cazurile ca minorități naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 32,
+    "statement": "Există state europene care nu recunosc principiul minorităților naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 33,
+    "statement": "Unele state europene recunosc ca unic principiu cetățenia și nu acceptă ideea de naționalitate.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 34,
+    "statement": "În unele state europene, naționalitatea este confundată cu statutul de cetățean.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 35,
+    "statement": "Abordarea României privind minoritățile este conformă cu principiile proclamate de Consiliul Europei în materia minorităților naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 36,
+    "statement": "Ion Iliescu susține că abordarea României privind minoritățile depășește principiile proclamate de Consiliul Europei în această materie.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 37,
+    "statement": "Drepturile recunoscute minorităților în România nu se întâlnesc în foarte multe state europene.",
+    "speaker": "Ion Iliescu"
+  }
+]
+
+END article_23_facts.json
+
+BEGIN article_23_search.json
+[
+  {
+    "fact_id": 1,
+    "queries": [
+      "Ion Iliescu Intervievatorul vine dintr regiune probleme similare discutate",
+      "Ion Iliescu Intervievatorul discutate probleme similare"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 2,
+    "queries": [
+      "Ion Iliescu România problema minorităților abordată înțelegere toleranță",
+      "Ion Iliescu minorităților înțelegere toleranță problema"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 3,
+    "queries": [
+      "Ion Iliescu România coexistat alături populația română multe minorități naționale rezultat",
+      "Ion Iliescu minorități trecutului coexistat populația"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 4,
+    "queries": [
+      "Ion Iliescu importantă minoritate națională România este minoritatea maghiară",
+      "Ion Iliescu minoritatea importantă minoritate națională"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 5,
+    "queries": [
+      "Ion Iliescu Românii constituit populația permanent majoritară Transilvania timpul imperiului",
+      "Ion Iliescu Transilvania constituit majoritară imperiului"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 6,
+    "queries": [
+      "Ion Iliescu Românii Transilvania bucurat drepturi politice timpul imperiului",
+      "Ion Iliescu Transilvania imperiului drepturi politice"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 7,
+    "queries": [
+      "Ion Iliescu Transilvania erau recunoscute doar trei națiuni",
+      "Ion Iliescu Transilvania recunoscute națiuni erau"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 8,
+    "queries": [
+      "Ion Iliescu Principiul unio trium nationum prevedea dreptul acces Dieta transilvană",
+      "Ion Iliescu transilvană Principiul nationum prevedea"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 9,
+    "queries": [
+      "Ion Iliescu Românii Transilvania erau tratați șerbi",
+      "Ion Iliescu Transilvania Românii tratați șerbi"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 10,
+    "queries": [
+      "Ion Iliescu Lupta emanciparea națională Transilvania temă dominantă istoria României",
+      "Ion Iliescu Transilvania emanciparea națională dominantă"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 429: Too Many Requests"
+    ]
+  },
+  {
+    "fact_id": 11,
+    "queries": [
+      "Ion Iliescu Lupta emanciparea națională Transilvania găsit expresia eliberarea Transilvaniei unirea",
+      "Ion Iliescu Transilvaniei Transilvania emanciparea eliberarea"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 429: Too Many Requests",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 12,
+    "queries": [
+      "Ion Iliescu Muntenia Moldova aflat aproximativ 500 dominație turcă",
+      "Ion Iliescu aproximativ dominație Muntenia Moldova"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 13,
+    "queries": [
+      "Ion Iliescu Muntenia Moldova aflat dominație turcă ocupație",
+      "Ion Iliescu dominație Muntenia ocupație Moldova"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 14,
+    "queries": [
+      "Ion Iliescu Turcii recunoscut existența Munteniei Moldovei state precum organizarea politică",
+      "Ion Iliescu organizarea recunoscut existența Munteniei"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 15,
+    "queries": [
+      "Ion Iliescu Muntenia Moldova devenit pașalâcuri turcești",
+      "Ion Iliescu pașalâcuri Muntenia turcești Moldova"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 16,
+    "queries": [
+      "Ion Iliescu Muntenia Moldova obținut independența devreme decât alte teritorii menționate",
+      "Ion Iliescu independența menționate teritorii Muntenia"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 17,
+    "queries": [
+      "Ion Iliescu Muntenia Moldova organizat stat unificat 1859",
+      "Ion Iliescu organizat Muntenia unificat Moldova"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 18,
+    "queries": [
+      "Ion Iliescu Muntenia Moldova Transilvania organizat prima dată într stat național",
+      "Ion Iliescu Transilvania organizat Muntenia național"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 19,
+    "queries": [
+      "Ion Iliescu Statul național unitar format primul război mondial inclus jumătate",
+      "Ion Iliescu teritoriul provincii național jumătate"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 20,
+    "queries": [
+      "Ion Iliescu Basarabia ocupată ruși începutul secolului",
+      "Ion Iliescu Basarabia începutul secolului ocupată"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 21,
+    "queries": [
+      "Ion Iliescu componența populației României există diverse minorități naționale urmare împrejurări",
+      "Ion Iliescu împrejurări componența populației minorități"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 22,
+    "queries": [
+      "Ion Iliescu România există aproximativ 14 minorități naționale organizații reprezentative",
+      "Ion Iliescu reprezentative aproximativ organizații minorități"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 23,
+    "queries": [
+      "Ion Iliescu Toate minoritățile naționale organizații reprezentative reprezentate Parlamentul României",
+      "Ion Iliescu reprezentative minoritățile reprezentate organizații"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 24,
+    "queries": [
+      "Ion Iliescu Revoluție constituit Parlament provizoriu"
+    ],
+    "sources": [
+      {
+        "source_id": 1,
+        "outlet": "Radio France Internationale",
+        "url": "https://www.rfi.fr/ro/rom%C3%A2nia/20250806-ioan-stanomir-la-rfi-rom%C3%A2nia-de-azi-este-crea%C8%9Bia-lui-ion-iliescu",
+        "publication_date": "2025-08-06",
+        "headline": "Ioan Stanomir, la RFI: România de azi este creația lui Ion Iliescu",
+        "excerpt": "Politologul Ioan Stanomir, profesor la facultatea de Științe politice a Universității din București, apreciază că atâta timp cât ancheta declanșată de statul român nu s-a soldat cu niciun rezultat, ..."
+      }
+    ],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 25,
+    "queries": [
+      "Ion Iliescu alegerile 1990 toate minoritățile naționale primit automat câte reprezentant",
+      "Ion Iliescu minoritățile reprezentant alegerile naționale"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 26,
+    "queries": [
+      "Ion Iliescu Maghiarii număr mare reprezentanți Parlament datorită numărului",
+      "Ion Iliescu reprezentanți Maghiarii Parlament numărului"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 27,
+    "queries": [
+      "Ion Iliescu România recunoaște identitatea minorităților naționale asigură dreptul manifesta afirma",
+      "Ion Iliescu minorităților identitatea recunoaște naționale"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 28,
+    "queries": [
+      "Ion Iliescu România sprijină cultivarea limbii culturii tradițiilor minorităților naționale",
+      "Ion Iliescu minorităților tradițiilor cultivarea naționale"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 29,
+    "queries": [
+      "Ion Iliescu România consideră limba cultura tradițiile minorităților naționale componente patrimoniului",
+      "Ion Iliescu minorităților patrimoniului tradițiile componente"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 30,
+    "queries": [
+      "Ion Iliescu România abordare recunoaștere minorităților naționale drepturilor specifice",
+      "Ion Iliescu minorităților recunoaștere drepturilor naționale"
+    ],
+    "sources": [
+      {
+        "source_id": 1,
+        "outlet": "Radio France Internationale",
+        "url": "https://www.rfi.fr/ro/rom%C3%A2nia/20250806-ioan-stanomir-la-rfi-rom%C3%A2nia-de-azi-este-crea%C8%9Bia-lui-ion-iliescu",
+        "publication_date": "2025-08-06",
+        "headline": "Ioan Stanomir, la RFI: România de azi este creația lui Ion Iliescu",
+        "excerpt": "Politologul Ioan Stanomir, profesor la facultatea de Științe politice a Universității din București, apreciază că atâta timp cât ancheta declanșată de statul român nu s-a soldat cu niciun rezultat, ..."
+      }
+    ],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 31,
+    "queries": [
+      "Ion Iliescu Români trăiesc teritoriul altor state recunoscuți toate cazurile minorități",
+      "Ion Iliescu recunoscuți teritoriul minorități naționale"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 32,
+    "queries": [
+      "Ion Iliescu Există state europene recunosc principiul minorităților naționale",
+      "Ion Iliescu minorităților principiul naționale europene"
+    ],
+    "sources": [
+      {
+        "source_id": 1,
+        "outlet": "Radio France Internationale",
+        "url": "https://www.rfi.fr/ro/rom%C3%A2nia/20250806-ioan-stanomir-la-rfi-rom%C3%A2nia-de-azi-este-crea%C8%9Bia-lui-ion-iliescu",
+        "publication_date": "2025-08-06",
+        "headline": "Ioan Stanomir, la RFI: România de azi este creația lui Ion Iliescu",
+        "excerpt": "Politologul Ioan Stanomir, profesor la facultatea de Științe politice a Universității din București, apreciază că atâta timp cât ancheta declanșată de statul român nu s-a soldat cu niciun rezultat, ..."
+      }
+    ],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 33,
+    "queries": [
+      "Ion Iliescu Unele state europene recunosc unic principiu cetățenia acceptă ideea",
+      "Ion Iliescu naționalitate principiu cetățenia europene"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 34,
+    "queries": [
+      "Ion Iliescu unele state europene naționalitatea este confundată statutul cetățean",
+      "Ion Iliescu naționalitatea confundată europene statutul"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 35,
+    "queries": [
+      "Ion Iliescu Abordarea României privind minoritățile este conformă principiile proclamate Consiliul",
+      "Ion Iliescu minorităților minoritățile principiile proclamate"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 36,
+    "queries": [
+      "Ion Iliescu Iliescu susține abordarea României privind minoritățile depășește principiile proclamate",
+      "Ion Iliescu minoritățile principiile proclamate abordarea"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  },
+  {
+    "fact_id": 37,
+    "queries": [
+      "Ion Iliescu Drepturile recunoscute minorităților România întâlnesc multe state europene",
+      "Ion Iliescu minorităților recunoscute Drepturile întâlnesc"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": [
+      "Google News: HTTP Error 503: Service Unavailable",
+      "Google News: HTTP Error 503: Service Unavailable"
+    ]
+  }
+]
+
+END article_23_search.json
+codex
+[
+  {"fact_id":1,"summary":"Not Available","source_ids":[]},
+  {"fact_id":2,"summary":"Not Available","source_ids":[]},
+  {"fact_id":3,"summary":"Not Available","source_ids":[]},
+  {"fact_id":4,"summary":"Not Available","source_ids":[]},
+  {"fact_id":5,"summary":"Not Available","source_ids":[]},
+  {"fact_id":6,"summary":"Not Available","source_ids":[]},
+  {"fact_id":7,"summary":"Not Available","source_ids":[]},
+  {"fact_id":8,"summary":"Not Available","source_ids":[]},
+  {"fact_id":9,"summary":"Not Available","source_ids":[]},
+  {"fact_id":10,"summary":"Not Available","source_ids":[]},
+  {"fact_id":11,"summary":"Not Available","source_ids":[]},
+  {"fact_id":12,"summary":"Not Available","source_ids":[]},
+  {"fact_id":13,"summary":"Not Available","source_ids":[]},
+  {"fact_id":14,"summary":"Not Available","source_ids":[]},
+  {"fact_id":15,"summary":"Not Available","source_ids":[]},
+  {"fact_id":16,"summary":"Not Available","source_ids":[]},
+  {"fact_id":17,"summary":"Not Available","source_ids":[]},
+  {"fact_id":18,"summary":"Not Available","source_ids":[]},
+  {"fact_id":19,"summary":"Not Available","source_ids":[]},
+  {"fact_id":20,"summary":"Not Available","source_ids":[]},
+  {"fact_id":21,"summary":"Not Available","source_ids":[]},
+  {"fact_id":22,"summary":"Not Available","source_ids":[]},
+  {"fact_id":23,"summary":"Not Available","source_ids":[]},
+  {"fact_id":24,"summary":"Not Available","source_ids":[]},
+  {"fact_id":25,"summary":"Not Available","source_ids":[]},
+  {"fact_id":26,"summary":"Not Available","source_ids":[]},
+  {"fact_id":27,"summary":"Not Available","source_ids":[]},
+  {"fact_id":28,"summary":"Not Available","source_ids":[]},
+  {"fact_id":29,"summary":"Not Available","source_ids":[]},
+  {"fact_id":30,"summary":"Not Available","source_ids":[]},
+  {"fact_id":31,"summary":"Not Available","source_ids":[]},
+  {"fact_id":32,"summary":"Not Available","source_ids":[]},
+  {"fact_id":33,"summary":"Not Available","source_ids":[]},
+  {"fact_id":34,"summary":"Not Available","source_ids":[]},
+  {"fact_id":35,"summary":"Not Available","source_ids":[]},
+  {"fact_id":36,"summary":"Not Available","source_ids":[]},
+  {"fact_id":37,"summary":"Not Available","source_ids":[]}
+]
+tokens used
+7,671
+[
+  {"fact_id":1,"summary":"Not Available","source_ids":[]},
+  {"fact_id":2,"summary":"Not Available","source_ids":[]},
+  {"fact_id":3,"summary":"Not Available","source_ids":[]},
+  {"fact_id":4,"summary":"Not Available","source_ids":[]},
+  {"fact_id":5,"summary":"Not Available","source_ids":[]},
+  {"fact_id":6,"summary":"Not Available","source_ids":[]},
+  {"fact_id":7,"summary":"Not Available","source_ids":[]},
+  {"fact_id":8,"summary":"Not Available","source_ids":[]},
+  {"fact_id":9,"summary":"Not Available","source_ids":[]},
+  {"fact_id":10,"summary":"Not Available","source_ids":[]},
+  {"fact_id":11,"summary":"Not Available","source_ids":[]},
+  {"fact_id":12,"summary":"Not Available","source_ids":[]},
+  {"fact_id":13,"summary":"Not Available","source_ids":[]},
+  {"fact_id":14,"summary":"Not Available","source_ids":[]},
+  {"fact_id":15,"summary":"Not Available","source_ids":[]},
+  {"fact_id":16,"summary":"Not Available","source_ids":[]},
+  {"fact_id":17,"summary":"Not Available","source_ids":[]},
+  {"fact_id":18,"summary":"Not Available","source_ids":[]},
+  {"fact_id":19,"summary":"Not Available","source_ids":[]},
+  {"fact_id":20,"summary":"Not Available","source_ids":[]},
+  {"fact_id":21,"summary":"Not Available","source_ids":[]},
+  {"fact_id":22,"summary":"Not Available","source_ids":[]},
+  {"fact_id":23,"summary":"Not Available","source_ids":[]},
+  {"fact_id":24,"summary":"Not Available","source_ids":[]},
+  {"fact_id":25,"summary":"Not Available","source_ids":[]},
+  {"fact_id":26,"summary":"Not Available","source_ids":[]},
+  {"fact_id":27,"summary":"Not Available","source_ids":[]},
+  {"fact_id":28,"summary":"Not Available","source_ids":[]},
+  {"fact_id":29,"summary":"Not Available","source_ids":[]},
+  {"fact_id":30,"summary":"Not Available","source_ids":[]},
+  {"fact_id":31,"summary":"Not Available","source_ids":[]},
+  {"fact_id":32,"summary":"Not Available","source_ids":[]},
+  {"fact_id":33,"summary":"Not Available","source_ids":[]},
+  {"fact_id":34,"summary":"Not Available","source_ids":[]},
+  {"fact_id":35,"summary":"Not Available","source_ids":[]},
+  {"fact_id":36,"summary":"Not Available","source_ids":[]},
+  {"fact_id":37,"summary":"Not Available","source_ids":[]}
+]

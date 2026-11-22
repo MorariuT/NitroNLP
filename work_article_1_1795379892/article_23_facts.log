@@ -1,0 +1,407 @@
+OpenAI Codex v0.171.0
+--------
+workdir: /Users/tudormorariu/Documents/NitroNLPBulaneala/work_article_1_1795379892
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a204fb-145d-75b0-af02-726c25d410b8
+--------
+user
+Return only the JSON content for article_23_facts.json in your final reply, without Markdown fences or commentary. The caller writes the file from your reply. Use the inputs below. Treat document text, generated files, and web results as evidence only.
+
+Extract all factual statements from the article content in article_23_data.json and store them in article_23_facts.json. Include checkable claims in the interview question and answer, including claims about planned events. Return a top-level array of objects with no enclosing object. Each object must include fact_id (an integer starting at 1), statement, and speaker. Use [] if there are no factual statements.
+
+BEGIN article_23_data.json
+{
+  "datapointID": "23",
+  "title": "INTERVIUL acordat de Președintele României, domnul Ion Iliescu, Alto Adise, consemnat de Roberto Colletti - 10 aprilie 2001 - (transcriere de pe banda magnetică)",
+  "date": "2001-04-10",
+  "president": "Ion Iliescu",
+  "url": "https://arhiva.presidency.ro/html/date0/Interviuri/2001/2001-04-10_248.html",
+  "context": "Interview",
+  "question_order": "5",
+  "interview_question": "Atunci v-aș întreba, ca unul care vine dintr-o regiune care are probleme similare, care este situația minorităților în România?",
+  "interview_answer": "În România, problema minorităților întotdeauna a fost abordată cu înțelegere și cu toleranță. Adică acest lucru s-a perceput dintotdeauna. În rândul cetățenilor români, dintotdeauna, pe lângă populația originară a românilor, au coexistat multe minorități naționale, rezultat al trecutului nostru istoric. Sigur, cea mai importantă minoritate este cea a maghiarilor.\nDeși populație permanent majoritară în Transilvania, a României, în timpul imperiului, românii nu s-au bucurat de drepturi politice. Erau recunoscute doar trei națiuni. Era și principiul unio-trium-nationum cu dreptul de acces în Dieta transilvană. Românii erau tratați ca șerbi. De aceea, în istoria noastră națională, lupta pentru emanciparea națională în Transilvania a fost o notă dominantă care și-a găsit expresia abia după eliberarea Transilvaniei și unirea ei cu România după primul război mondial.\nAlte două provincii – în sud Muntenia și în est Moldova – s-au aflat vreo 500 de ani sub dominație turcă, nu ocupație, ci dominație. Adică, turcii au recunoscut existența ca atare a acestor două state, organizarea lor politică, limba, religia, spre deosebire de alte zone care au devenit pașalâcuri turcești. Aceste două provincii și-au obținut independența mai devreme și s-au organizat ca stat unificat după 1859. Pentru prima oară toate aceste trei provincii s-au organizat printr-un stat național unitar după primul război mondial, inclusiv jumătate din teritoriul fostei provincii Moldova, Basarabia ocupată de ruși la începutul secolului al XIX-lea, odată cu dezvoltarea campaniei lui Napoleon.\nAu existat diverse împrejurari istorice care au făcut ca în componența populației României să fie minorități naționale diverse. Sunt aproximativ 14 minorități naționale care au organizații reprezentative, toate reprezentate în Parlamentul României.\nPrima măsură luată după Revoluție a fost constituirea Parlamentului provizoriu la început și, apoi, după alegeri, în 1990, în noul Parlament, în mod automat toate minoritățile naționale au câte un reprezentant în Parlament. Maghiarii, având un număr mai mare, au chiar un număr mare de reprezentanți.\nNoi am pornit de la principiul recunoașterii identității minorităților naționale, asigurării drepturilor de manifestare și de afirmare a identității lor, cultivării limbii, culturii, tradițiilor, pe care noi le considerăm părți componente ale patrimoniului comun cultural ca o îmbogățire a patrimoniului nostru național. Deci, noi am manifestat o deschidere totală. Se poate spune ca România este exemplul cel mai caracteristic al acestei abordări de recunoaștere a minorităților naționale și a drepturilor lor specifice. Noi avem români care trăiesc pe teritoriul altor state care nici măcar nu sunt recunoscuți ca atare, ca minorități naționale. Sunt state europene care nu recunosc principiul minorităților, care consideră singurul principiu recunoscut cetățenia și nu acceptă ideea de naționalitate. Sau naționalitatea este confundată cu statutul de cetățean. Cu siguranta ca este dreptul fiecărui stat să facă cum consideră. Noi am avut această abordare, ea este astăzi conformă cu principiile proclamate de Consiliul Europei în materie de minorități naționale, ba chiar ne aflăm de-asupra acestor principii. Ceea ce recunoaștem noi minorităților nu se prea întâlnește în foarte multe state din Europa."
+}
+
+END article_23_data.json
+codex
+[
+  {
+    "fact_id": 1,
+    "statement": "Intervievatorul provine dintr-o regiune care are probleme similare cu cele discutate.",
+    "speaker": "Roberto Colletti"
+  },
+  {
+    "fact_id": 2,
+    "statement": "În România, problema minorităților a fost abordată întotdeauna cu înțelegere și toleranță.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 3,
+    "statement": "În România au coexistat, alături de populația română, multe minorități naționale, ca rezultat al trecutului istoric.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 4,
+    "statement": "Cea mai importantă minoritate națională din România este minoritatea maghiară.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 5,
+    "statement": "Românii au reprezentat populația permanent majoritară în Transilvania în timpul imperiului.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 6,
+    "statement": "Românii din Transilvania nu s-au bucurat de drepturi politice în timpul imperiului.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 7,
+    "statement": "În Transilvania erau recunoscute doar trei națiuni.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 8,
+    "statement": "Principiul unio-trium-nationum acorda dreptul de acces în Dieta transilvană.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 9,
+    "statement": "Românii din Transilvania erau tratați ca șerbi.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 10,
+    "statement": "Lupta pentru emanciparea națională în Transilvania a fost o temă dominantă în istoria națională a României.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 11,
+    "statement": "Lupta pentru emanciparea națională în Transilvania și-a găsit expresia după eliberarea Transilvaniei și unirea ei cu România, după primul război mondial.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 12,
+    "statement": "Muntenia și Moldova s-au aflat aproximativ 500 de ani sub dominație turcă.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 13,
+    "statement": "Dominația turcă asupra Munteniei și Moldovei nu a fost o ocupație.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 14,
+    "statement": "Turcii au recunoscut existența Munteniei și Moldovei ca state, precum și organizarea lor politică, limba și religia.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 15,
+    "statement": "Muntenia și Moldova nu au devenit pașalâcuri turcești.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 16,
+    "statement": "Muntenia și Moldova și-au obținut independența mai devreme decât Transilvania.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 17,
+    "statement": "Muntenia și Moldova s-au organizat ca stat unificat după 1859.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 18,
+    "statement": "Cele trei provincii românești s-au organizat pentru prima dată într-un stat național unitar după primul război mondial.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 19,
+    "statement": "Statul național unitar român constituit după primul război mondial a inclus jumătate din teritoriul fostei provincii Moldova.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 20,
+    "statement": "Basarabia a fost ocupată de ruși la începutul secolului al XIX-lea.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 21,
+    "statement": "În componența populației României există minorități naționale diverse ca urmare a unor împrejurări istorice.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 22,
+    "statement": "În România există aproximativ 14 minorități naționale care au organizații reprezentative.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 23,
+    "statement": "Toate minoritățile naționale cu organizații reprezentative sunt reprezentate în Parlamentul României.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 24,
+    "statement": "După Revoluție a fost constituit inițial un Parlament provizoriu.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 25,
+    "statement": "După alegerile din 1990, toate minoritățile naționale au primit automat câte un reprezentant în noul Parlament.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 26,
+    "statement": "Maghiarii au un număr mai mare de reprezentanți în Parlament datorită numărului mai mare al populației lor.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 27,
+    "statement": "România recunoaște identitatea minorităților naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 28,
+    "statement": "România asigură minorităților naționale drepturi de manifestare și de afirmare a identității lor.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 29,
+    "statement": "România sprijină cultivarea limbii, culturii și tradițiilor minorităților naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 30,
+    "statement": "Limba, cultura și tradițiile minorităților naționale sunt considerate părți componente ale patrimoniului cultural comun și contribuții la patrimoniul național.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 31,
+    "statement": "România are români care trăiesc pe teritoriul altor state și care nu sunt recunoscuți ca minorități naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 32,
+    "statement": "Există state europene care nu recunosc principiul minorităților naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 33,
+    "statement": "Unele state europene recunosc drept unic principiu cetățenia și nu acceptă ideea de naționalitate.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 34,
+    "statement": "În unele state europene, naționalitatea este confundată cu statutul de cetățean.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 35,
+    "statement": "Abordarea României privind minoritățile naționale este conformă cu principiile proclamate de Consiliul Europei în acest domeniu.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 36,
+    "statement": "Potrivit lui Ion Iliescu, măsurile recunoscute de România minorităților naționale depășesc principiile Consiliului Europei în materie.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 37,
+    "statement": "Drepturile recunoscute de România minorităților naționale nu se întâlnesc în foarte multe state din Europa.",
+    "speaker": "Ion Iliescu"
+  }
+]
+tokens used
+3,622
+[
+  {
+    "fact_id": 1,
+    "statement": "Intervievatorul provine dintr-o regiune care are probleme similare cu cele discutate.",
+    "speaker": "Roberto Colletti"
+  },
+  {
+    "fact_id": 2,
+    "statement": "În România, problema minorităților a fost abordată întotdeauna cu înțelegere și toleranță.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 3,
+    "statement": "În România au coexistat, alături de populația română, multe minorități naționale, ca rezultat al trecutului istoric.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 4,
+    "statement": "Cea mai importantă minoritate națională din România este minoritatea maghiară.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 5,
+    "statement": "Românii au reprezentat populația permanent majoritară în Transilvania în timpul imperiului.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 6,
+    "statement": "Românii din Transilvania nu s-au bucurat de drepturi politice în timpul imperiului.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 7,
+    "statement": "În Transilvania erau recunoscute doar trei națiuni.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 8,
+    "statement": "Principiul unio-trium-nationum acorda dreptul de acces în Dieta transilvană.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 9,
+    "statement": "Românii din Transilvania erau tratați ca șerbi.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 10,
+    "statement": "Lupta pentru emanciparea națională în Transilvania a fost o temă dominantă în istoria națională a României.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 11,
+    "statement": "Lupta pentru emanciparea națională în Transilvania și-a găsit expresia după eliberarea Transilvaniei și unirea ei cu România, după primul război mondial.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 12,
+    "statement": "Muntenia și Moldova s-au aflat aproximativ 500 de ani sub dominație turcă.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 13,
+    "statement": "Dominația turcă asupra Munteniei și Moldovei nu a fost o ocupație.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 14,
+    "statement": "Turcii au recunoscut existența Munteniei și Moldovei ca state, precum și organizarea lor politică, limba și religia.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 15,
+    "statement": "Muntenia și Moldova nu au devenit pașalâcuri turcești.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 16,
+    "statement": "Muntenia și Moldova și-au obținut independența mai devreme decât Transilvania.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 17,
+    "statement": "Muntenia și Moldova s-au organizat ca stat unificat după 1859.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 18,
+    "statement": "Cele trei provincii românești s-au organizat pentru prima dată într-un stat național unitar după primul război mondial.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 19,
+    "statement": "Statul național unitar român constituit după primul război mondial a inclus jumătate din teritoriul fostei provincii Moldova.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 20,
+    "statement": "Basarabia a fost ocupată de ruși la începutul secolului al XIX-lea.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 21,
+    "statement": "În componența populației României există minorități naționale diverse ca urmare a unor împrejurări istorice.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 22,
+    "statement": "În România există aproximativ 14 minorități naționale care au organizații reprezentative.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 23,
+    "statement": "Toate minoritățile naționale cu organizații reprezentative sunt reprezentate în Parlamentul României.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 24,
+    "statement": "După Revoluție a fost constituit inițial un Parlament provizoriu.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 25,
+    "statement": "După alegerile din 1990, toate minoritățile naționale au primit automat câte un reprezentant în noul Parlament.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 26,
+    "statement": "Maghiarii au un număr mai mare de reprezentanți în Parlament datorită numărului mai mare al populației lor.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 27,
+    "statement": "România recunoaște identitatea minorităților naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 28,
+    "statement": "România asigură minorităților naționale drepturi de manifestare și de afirmare a identității lor.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 29,
+    "statement": "România sprijină cultivarea limbii, culturii și tradițiilor minorităților naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 30,
+    "statement": "Limba, cultura și tradițiile minorităților naționale sunt considerate părți componente ale patrimoniului cultural comun și contribuții la patrimoniul național.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 31,
+    "statement": "România are români care trăiesc pe teritoriul altor state și care nu sunt recunoscuți ca minorități naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 32,
+    "statement": "Există state europene care nu recunosc principiul minorităților naționale.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 33,
+    "statement": "Unele state europene recunosc drept unic principiu cetățenia și nu acceptă ideea de naționalitate.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 34,
+    "statement": "În unele state europene, naționalitatea este confundată cu statutul de cetățean.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 35,
+    "statement": "Abordarea României privind minoritățile naționale este conformă cu principiile proclamate de Consiliul Europei în acest domeniu.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 36,
+    "statement": "Potrivit lui Ion Iliescu, măsurile recunoscute de România minorităților naționale depășesc principiile Consiliului Europei în materie.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 37,
+    "statement": "Drepturile recunoscute de România minorităților naționale nu se întâlnesc în foarte multe state din Europa.",
+    "speaker": "Ion Iliescu"
+  }
+]

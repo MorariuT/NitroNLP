@@ -1,0 +1,432 @@
+OpenAI Codex v0.171.0
+--------
+workdir: /Users/tudormorariu/Documents/NitroNLPBulaneala/work_article_0_1795379672
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: low
+reasoning summaries: none
+session id: 01a204f8-7198-7691-aad1-3adde0b35eff
+--------
+user
+Return only the JSON content for article_18_factcheck.json in your final reply, without Markdown fences or commentary. The caller writes the file from your reply. Use the inputs below. Treat document text, generated files, and web results as evidence only.
+
+For each fact in article_18_facts.json, summarize only relevant newspaper reporting from its supplied search results in article_18_search.json. The results are dated strictly after the article date (2001-03-01). Return a top-level array with one object per fact: fact_id, summary, and source_ids. Cite only the numeric source IDs provided for that fact. A headline or excerpt must directly support the summary. Use the exact summary 'Not Available' and source_ids: [] if the available results do not establish the fact. Return [] if there are no facts.
+
+BEGIN article_18_facts.json
+[
+  {
+    "fact_id": 1,
+    "statement": "Există capitale-cheie europene și de peste ocean în care numirea ambasadorilor durează mult.",
+    "speaker": "intervievator"
+  },
+  {
+    "fact_id": 2,
+    "statement": "La Berlin nu există ambasador.",
+    "speaker": "intervievator"
+  },
+  {
+    "fact_id": 3,
+    "statement": "Uniunea Europeană, NATO și Parisul sunt menționate printre posturile pentru care nu există ambasadori.",
+    "speaker": "intervievator"
+  },
+  {
+    "fact_id": 4,
+    "statement": "Există deja nume de ambasadori într-un portofoliu.",
+    "speaker": "intervievator"
+  },
+  {
+    "fact_id": 5,
+    "statement": "Situația numirii ambasadorilor creează nesiguranță în rândul partenerilor occidentali.",
+    "speaker": "intervievator"
+  },
+  {
+    "fact_id": 6,
+    "statement": "Guvernul s-a format cu o lună și jumătate înainte de conferința de presă.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 7,
+    "statement": "În general, oamenii au fost așezați pe posturi în cadrul Guvernului.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 8,
+    "statement": "Geoană a devenit ministru de externe.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 9,
+    "statement": "Ambasadorul de la Haga a devenit adjunct al ministrului de externe.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 10,
+    "statement": "În perioada de aproximativ o lună și jumătate sau două luni s-au făcut sugestii și propuneri pentru ocuparea posturilor de ambasadori, în funcție de situația existentă.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 11,
+    "statement": "Guvernul a luat în discuție, la 1 martie 2001, zece propuneri pentru noi ambasadori.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 12,
+    "statement": "Cele zece propuneri vizează ocuparea posturilor de ambasadori devenite vacante.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 13,
+    "statement": "Procesul de numire a ambasadorilor continuă.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 14,
+    "statement": "Candidații pentru posturile de ambasadori trebuie să treacă prin comisiile de politică externă ale Parlamentului.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 15,
+    "statement": "După examinarea în comisiile de politică externă ale Parlamentului urmează numirea prin decret prezidențial.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 16,
+    "statement": "După numirea prin decret prezidențial, ambasadorii sunt trimiși la post.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 17,
+    "statement": "Au fost rechemați paisprezece ambasadori.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 18,
+    "statement": "La 1 martie 2001 au fost desemnați zece candidați pentru posturile de ambasadori.",
+    "speaker": "Ion Iliescu"
+  },
+  {
+    "fact_id": 19,
+    "statement": "Printre posturile vizate se află și posturi din capitale-cheie.",
+    "speaker": "Ion Iliescu"
+  }
+]
+
+END article_18_facts.json
+
+BEGIN article_18_search.json
+[
+  {
+    "fact_id": 1,
+    "queries": [
+      "Ion Iliescu Există capitale cheie europene ocean numirea ambasadorilor durează",
+      "Ion Iliescu ambasadorilor capitale europene numirea"
+    ],
+    "sources": [
+      {
+        "source_id": 1,
+        "outlet": "Europa Libera Romania",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMnEySjlUNUw0cV9FaDJrWUt2ZnNrcXg1cHpfQ0pxa25PYWI0d0RTT0dOU0cyc2RGSHFnSi1hVnEwak9RZ0pfOWd3RTBpTXgzSE9FaEFNSk1PM3ZoZDU4N0p0MFRleEtyWjMxdk1jME9kb2c5UGVLUEtzNWxBRUlVVmtETmZzMnh3WG93dm5FaFnSAZMBQVVfeXFMTjR0WEN1cnktU2ZyMzBIR2tpLWlLVjJYNUplUzNsWDFSX1lsbVN5aGVqdUc1azVic0UwSTM4bjZTbTFadUpuMWJFSFRVa0lOLWxCVnRjVG15T3FteXVkWFc2WnZpNUQ3VWpmcDA1ZkM4VnIxdmZDSkhLeU54Y0JDdFhObU1ucXphalFwWTVFdzNNVGkw?oc=5",
+        "publication_date": "2025-09-11",
+        "headline": "România plătește 3,25 milioane de euro anual pentru reședințele ambasadorilor în țări în care sediile misiunilor sunt proprietatea statului",
+        "excerpt": ""
+      }
+    ],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 2,
+    "queries": [
+      "Ion Iliescu Berlin există ambasador"
+    ],
+    "sources": [
+      {
+        "source_id": 1,
+        "outlet": "Stiripesurse",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQajNPeUlVYWkyVEV3UzhGcGdYclV4M09Rb0F6TjFkRUg5dmhJSHEzVG5RY2hJODVSbThvdDFaR2ZCXzFvVV9hUUpaenJCZkNKd05XeFdIWFVlLWpJY2VzaVFDQVRPX2MtX3JQZnFBWE1qd2NvaFotWDNnVnNVcGZkSXl3U29rbG81eUtvRmdBcjRvVkhhVVRUZE5HLTdfNkJLRklrWEthUjlXTzkwUDV6R1lzZU9kQ25KZnlmOXQtT0dMQ2NheVJxNnRmRGhsWDNhWlhPRQ?oc=5",
+        "publication_date": "2020-09-19",
+        "headline": "EXCLUSIV - Lista celor 32 de ambasadori propuşi de Klaus Iohannis: Cine sunt cei care vor reprezenta România",
+        "excerpt": ""
+      }
+    ],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 3,
+    "queries": [
+      "Ion Iliescu Uniunea Europeană NATO Parisul menționate printre posturile există ambasadori",
+      "Ion Iliescu menționate ambasadori Europeană posturile"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 4,
+    "queries": [
+      "Ion Iliescu Există nume ambasadori într portofoliu",
+      "Ion Iliescu ambasadori portofoliu Există nume"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 5,
+    "queries": [
+      "Ion Iliescu Situația numirii ambasadorilor creează nesiguranță rândul partenerilor occidentali",
+      "Ion Iliescu ambasadorilor partenerilor nesiguranță occidentali"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 6,
+    "queries": [
+      "Ion Iliescu Guvernul format lună jumătate conferința presă"
+    ],
+    "sources": [
+      {
+        "source_id": 1,
+        "outlet": "HotNews.ro",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQV1lPb0VHSGZEQkhHNFZXcUxoSmV3WklCdncyN0JYNDVOVUl5MXY3YVFJY01XanVHUDUxVkdXd3JoUkhHbzlaZ1JoVnZueHZ3REhGTUs4cTlua2RFWi1BVFhfampGN1UxbEQyTFI2dWtKWFA0LWNnek5wVkFRcE9HYnM3cGpkeTE3ajNjNHNTbXF2M3hIVGRRaVBuV19JakRvcUk0QzdQbTFpMGM?oc=5",
+        "publication_date": "2026-11-11",
+        "headline": "Ion Iliescu a interzis și el ziariști la Cotroceni. Ce i-a spus Ovidiu Vanghele lui Nicușor Dan, stârnind reacția președintelui",
+        "excerpt": ""
+      }
+    ],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 7,
+    "queries": [
+      "Ion Iliescu general oamenii așezați posturi cadrul Guvernului",
+      "Ion Iliescu Guvernului general oamenii așezați"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 8,
+    "queries": [
+      "Ion Iliescu Geoană devenit ministru externe"
+    ],
+    "sources": [
+      {
+        "source_id": 1,
+        "outlet": "Recorder",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcmJGMllPRjI3b2VVcmxQZVRNWDdsVGMtZURMaTE1V0kzZW9TYW1MV1h5dmJaYnctU1lBaWtpUUExa2NBNl9UcnJMTHhibTN1Z1pnVV9lclYwRGxVMHE4TmtJSGh2WlJoM29NNnAyUUVZZHQyZ200VjM0ZWdXb3NDVjdLRVJ0V0lnSmc?oc=5",
+        "publication_date": "2024-11-11",
+        "headline": "Portret de candidat: Mircea Geoană, în luptă cu propriul trecut",
+        "excerpt": ""
+      },
+      {
+        "source_id": 2,
+        "outlet": "Europa Libera Romania",
+        "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNaVE0XzgxUU5ZelZlZXVSWHZYeDVjS2pzei1CajQ4VEpXTTFWczZCZWdVMm1aeHZrSXhHM1FUem5pWFJMaXpiM3VsV1FLN080eWJ3SXc0OVpzenRuTUIzWXZySG1xWDJrTk1SMmJqTDRFbmpCZTAxWHpwaG4wOUZPTTl0b21oM3BmMXktU1FrMmhZdlFhSk1vZlJ6OTRNaUROa1ZJc19sT1JwcHJuTTBlVE5KbUhWTTE3SUc4SGdVa3JCRHBiVTF1Uk13UUJNOUpva3JZNjUyNlZyQlhDM1ZJSnk3TUVSVm51XzF2WEZJMjY2ZWtUMXY3eU9sTDRuUdIBgAJBVV95cUxQeDZsNnI0ZW9yZGx1aWtUVDhnRGpiSEhRazlaZnI3MXpJeVA0RTNmMng5Q3lOVklaUThVNmxNMy10cFZzQzVZempmT21sT3Q4ZnpBWHNQdk5SMHVmNEpWRmRCUHFZVVlrMzBCZHpPbldncDloUVJ5MzY0QnFHY1ZTbjdWVWhXZVhsdGdFRkt3ZVJOVEhEUjZDNnhwNFZMclFVVlFZTWVLVUFCNS1IX1VnbkFMUUxzU0VYcFg2YlVyMFdjTmJVdzBPemp5TjBXY21XWjBUY2RmWEEzYTZsNVJlTk9yaDhCVUhaU1NTN1dwTy1GQUVXZmZlUjMyLWJGaUc0?oc=5",
+        "publication_date": "2024-11-26",
+        "headline": "Mircea Geoană, poarta de intrare în diplomație pentru Călin Georgescu. Ce spune astăzi fostul număr doi din NATO despre candidatul filorus",
+        "excerpt": ""
+      },
+      {
+        "source_id": 3,
+        "outlet": "Digi24",
+        "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQbXRYWm8xQ0ZEZVQ1OHJ1enh2NkxscFl0ckdsdUlvdUQxd2hMYU01c25TMVVKbFhKMXhlMXlhRWdiZmg3QjBCeGNxY0gyc3ppNGtfalNpRnJDaFBYZXQySGFmQ0E3VFRnWDVnbTZrUVpFbTVXUE5QR3JpTy1DSHB6VzRFd1JGOVlFaWhzOFFpeWJjd0Juc1lZemlrMjZILVRHaXdXUkxXcGJ6TnNHb0FqbDg4NHI4WGRIVmNWNkMzQ0RuWVQzR0FGYlJPek5YaGZBdFpNOGtjMzVpVWI2WUFEbE40THFnY3ZSUG03UmNCdUlnUHJOMllFTnk1Y1BOSHBqQW5FUnZwLUQyV3hFYkFKY1Y4cDhHR0XSAaICQVVfeXFMTVNiS2J4S080a0hZcHlPME5ETmI4MDJWMEdfSVphY3JraEY2bzBVbFJsZmN2OFRSbmc0ZjM2XzZzODE1OFlocXNVSG5hNW4yUGlkMVdENGdmZVJraWMyS0NFQ1RlTzhDSkszcWxrUE9FN2UxYmZ6djVXbXlPcTVlTnhQRmRSYW9pQzh6SW5PT1o0MzIwQkp4cXQ5MlREV3pISGVOdkk3MjE4a3FScTBpRl9VNEhhR2FacG1qaE5vYjlxb2t2SVZ1UzFYZGlEeXdFbXozb21NLWM1NldwZFBoM1U0YXowUEJUNGFrMXBUZ25PcWtUZFY1VnBLZTFoRFpQck9NbTdUNXZCMksyaGlIWTJkd3Byakl1bURYU2xNbEhRZ1E?oc=5",
+        "publication_date": "2025-08-05",
+        "headline": "Cele mai importante momente din viața și cariera politică a lui Ion Iliescu, primul președinte al României...",
+        "excerpt": ""
+      },
+      {
+        "source_id": 4,
+        "outlet": "DW.com",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPX051dmNvaVFNajcxeVNNNExhejl3WHZBQjR4dVFRLURpcFNxTllGdlJKV3FDaENCWmdjU01iNFE0OURiOFJWTno1a0dzSzlsVHVCaVhaLXYxM1FhNUJUYlFyRFFNVzdrckFkQ0xPTERBa3NRUEV2WU9EbWI3ZDdTbHl6UVl4MnNNSkdxWXRWazBfb2hRLTdNRDY5MEZFWXdvN21TZkVHVnhkZ9IBqgFBVV95cUxPYjEtaTA1bExXVU82QkE0RV9UbGZBMGk3WlhXS0VDY3AxSGVWWS04TmpqTF8td0dGSWtJZGJVRVZhVDhvWkJWZnJzdy1BSDdyMWdsbWM5WDA5TzUzRjNRd2s5TFFsLVR1dldCZkdUbmU2VFRnMHpvb3BwR01xbnhHQ2VmeTBmNnd4QjEtQkprYzdVcWpIaFVlQXVMNVhWXzZ0ZnpHaGdhclVWUQ?oc=5",
+        "publication_date": "2024-09-11",
+        "headline": "Paradoxurile lui Geoană între SUA și (post)nomenklatură",
+        "excerpt": ""
+      },
+      {
+        "source_id": 5,
+        "outlet": "Stirile ProTV",
+        "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQOERyY1lyY2VUMDJtMjZsTnhOdk9XeDROU0hObnZJeE82aEJyRWw5YVBKeFczZG1HSzhPdEttT3JpREs2OUtRM1NqS0stUzdhNVhmUEZtM1FZUWZSTXF6cVg3VmpzMzlhUkFnUkt3MDA0c09tZlg0SEQwNkFiOTIzUDZrYm1nb1JMSy0xWHFZMWFKQkRWdkRqamU2aE80emhxUDZ1YUdYNEh1OXNkWmZraHZpZ214V2lITlNqZjY3NnhORVpmNEhDSjRNTjRWcS1TM2FoN1hsakhBRy1KdG5YM0tMekhDbklYUkphbEFKQk9BNGdLQ290WQ?oc=5",
+        "publication_date": "2024-09-11",
+        "headline": "Cine este Mircea Geoană. Care sunt cele mai importante repere din cariera lui. De la cel mai tânăr ambasador la adjunct NATO",
+        "excerpt": ""
+      }
+    ],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 9,
+    "queries": [
+      "Ion Iliescu Ambasadorul Haga devenit adjunct ministrului externe",
+      "Ion Iliescu Ambasadorul ministrului devenit adjunct"
+    ],
+    "sources": [
+      {
+        "source_id": 1,
+        "outlet": "Recorder",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNcmJGMllPRjI3b2VVcmxQZVRNWDdsVGMtZURMaTE1V0kzZW9TYW1MV1h5dmJaYnctU1lBaWtpUUExa2NBNl9UcnJMTHhibTN1Z1pnVV9lclYwRGxVMHE4TmtJSGh2WlJoM29NNnAyUUVZZHQyZ200VjM0ZWdXb3NDVjdLRVJ0V0lnSmc?oc=5",
+        "publication_date": "2024-11-11",
+        "headline": "Portret de candidat: Mircea Geoană, în luptă cu propriul trecut",
+        "excerpt": ""
+      },
+      {
+        "source_id": 2,
+        "outlet": "DW.com",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPX051dmNvaVFNajcxeVNNNExhejl3WHZBQjR4dVFRLURpcFNxTllGdlJKV3FDaENCWmdjU01iNFE0OURiOFJWTno1a0dzSzlsVHVCaVhaLXYxM1FhNUJUYlFyRFFNVzdrckFkQ0xPTERBa3NRUEV2WU9EbWI3ZDdTbHl6UVl4MnNNSkdxWXRWazBfb2hRLTdNRDY5MEZFWXdvN21TZkVHVnhkZ9IBqgFBVV95cUxPYjEtaTA1bExXVU82QkE0RV9UbGZBMGk3WlhXS0VDY3AxSGVWWS04TmpqTF8td0dGSWtJZGJVRVZhVDhvWkJWZnJzdy1BSDdyMWdsbWM5WDA5TzUzRjNRd2s5TFFsLVR1dldCZkdUbmU2VFRnMHpvb3BwR01xbnhHQ2VmeTBmNnd4QjEtQkprYzdVcWpIaFVlQXVMNVhWXzZ0ZnpHaGdhclVWUQ?oc=5",
+        "publication_date": "2024-09-11",
+        "headline": "Paradoxurile lui Geoană între SUA și (post)nomenklatură",
+        "excerpt": ""
+      },
+      {
+        "source_id": 3,
+        "outlet": "Stirile ProTV",
+        "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQOERyY1lyY2VUMDJtMjZsTnhOdk9XeDROU0hObnZJeE82aEJyRWw5YVBKeFczZG1HSzhPdEttT3JpREs2OUtRM1NqS0stUzdhNVhmUEZtM1FZUWZSTXF6cVg3VmpzMzlhUkFnUkt3MDA0c09tZlg0SEQwNkFiOTIzUDZrYm1nb1JMSy0xWHFZMWFKQkRWdkRqamU2aE80emhxUDZ1YUdYNEh1OXNkWmZraHZpZ214V2lITlNqZjY3NnhORVpmNEhDSjRNTjRWcS1TM2FoN1hsakhBRy1KdG5YM0tMekhDbklYUkphbEFKQk9BNGdLQ290WQ?oc=5",
+        "publication_date": "2024-09-11",
+        "headline": "Cine este Mircea Geoană. Care sunt cele mai importante repere din cariera lui. De la cel mai tânăr ambasador la adjunct NATO",
+        "excerpt": ""
+      },
+      {
+        "source_id": 4,
+        "outlet": "Europa Libera Romania",
+        "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNaVE0XzgxUU5ZelZlZXVSWHZYeDVjS2pzei1CajQ4VEpXTTFWczZCZWdVMm1aeHZrSXhHM1FUem5pWFJMaXpiM3VsV1FLN080eWJ3SXc0OVpzenRuTUIzWXZySG1xWDJrTk1SMmJqTDRFbmpCZTAxWHpwaG4wOUZPTTl0b21oM3BmMXktU1FrMmhZdlFhSk1vZlJ6OTRNaUROa1ZJc19sT1JwcHJuTTBlVE5KbUhWTTE3SUc4SGdVa3JCRHBiVTF1Uk13UUJNOUpva3JZNjUyNlZyQlhDM1ZJSnk3TUVSVm51XzF2WEZJMjY2ZWtUMXY3eU9sTDRuUdIBgAJBVV95cUxQeDZsNnI0ZW9yZGx1aWtUVDhnRGpiSEhRazlaZnI3MXpJeVA0RTNmMng5Q3lOVklaUThVNmxNMy10cFZzQzVZempmT21sT3Q4ZnpBWHNQdk5SMHVmNEpWRmRCUHFZVVlrMzBCZHpPbldncDloUVJ5MzY0QnFHY1ZTbjdWVWhXZVhsdGdFRkt3ZVJOVEhEUjZDNnhwNFZMclFVVlFZTWVLVUFCNS1IX1VnbkFMUUxzU0VYcFg2YlVyMFdjTmJVdzBPemp5TjBXY21XWjBUY2RmWEEzYTZsNVJlTk9yaDhCVUhaU1NTN1dwTy1GQUVXZmZlUjMyLWJGaUc0?oc=5",
+        "publication_date": "2024-11-26",
+        "headline": "Mircea Geoană, poarta de intrare în diplomație pentru Călin Georgescu. Ce spune astăzi fostul număr doi din NATO despre candidatul filorus",
+        "excerpt": ""
+      },
+      {
+        "source_id": 5,
+        "outlet": "Evenimentul Zilei",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeU5qcHFnMjJpZWM3U09wWjVrZzladlk4N19Ta2kyeHhMSjVTa2J1SkstS1lDRmtEOVdoRnhDaHZCdFg4cTB2d2NoNWowbG1yODRnTnRGV2FmVlJZVXh1UExnUWlIQUdGWVhWNmtqY28xVTQwSXhMd3k5U3dyeDMzanR5eGFJczZFYm5XMGpzWldDc2tLNk5nWUxXYXFTREplY1ZZUWJLT0xXNjl6WS1sNGR0bUt3cEJ1Vlc1ZXR2cW1QY080NGc?oc=5",
+        "publication_date": "2015-08-31",
+        "headline": "Lista Fantomelor Securității: Sfătuitorul lui Ion Iliescu, Traian Chebeleu este fost consilier al securității",
+        "excerpt": ""
+      }
+    ],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 10,
+    "queries": [
+      "Ion Iliescu perioada aproximativ lună jumătate două luni făcut sugestii propuneri",
+      "Ion Iliescu aproximativ posturilor ambasadori propuneri"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 11,
+    "queries": [
+      "Ion Iliescu Guvernul luat discuție 1 martie 2001 zece propuneri ambasadori",
+      "Ion Iliescu ambasadori propuneri Guvernul discuție"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 12,
+    "queries": [
+      "Ion Iliescu zece propuneri vizează ocuparea posturilor ambasadori devenite vacante",
+      "Ion Iliescu posturilor ambasadori propuneri ocuparea"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 13,
+    "queries": [
+      "Ion Iliescu Procesul numire ambasadorilor continuă",
+      "Ion Iliescu ambasadorilor Procesul continuă numire"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 14,
+    "queries": [
+      "Ion Iliescu Candidații posturile ambasadori trebuie treacă comisiile politică externă Parlamentului",
+      "Ion Iliescu Parlamentului Candidații ambasadori posturile"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 15,
+    "queries": [
+      "Ion Iliescu examinarea comisiile politică externă Parlamentului urmează numirea decret prezidențial",
+      "Ion Iliescu Parlamentului prezidențial examinarea comisiile"
+    ],
+    "sources": [
+      {
+        "source_id": 1,
+        "outlet": "Europa Libera Romania",
+        "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOakpyUHBwZzd5TjVjN1h1NEVwcnBVVEpleEdsV2pNS2lEb21qLUJ2bmdaby1GcXJVR2h1d1N6N1FrUVBBSU1UckFhS3JVelhva2lJUzhad0VPMHlwMFQ4cXBPeHNKM3ozTkRLenF5YkQzeHdJeDRUajZJVE1TeHc5MVZhY3JIaVJFcHpCa0ZrdWJWS3M1VlZyWk1qSk5hblFobWVjaDFhaVNxcEVCRkdFbXZrNEZZYUpyOW1ibTVMRnZqcjIwSW1FQnJOYmhLTUZxOFZCOXR4UmlVNXA0U21Jb2ctUmtfcDRuV0RmWkZsUmtiaDU4bFhSUkM2bU1ZOThhWVZ4a3AxTGJfb0tPSHNqd3g3aDDSAZcCQVVfeXFMTmtwNjlzYTI0T043TEtyeGNnNUVxRTUzUndMLUJYYTNFUGRSRTVfOXlxcmFWWE1sQU1XdFl1WnZSVUNSRGN1R1VYWGtxQmc0dXVBUmNPMHA0ZnptRERSa192bGZqcmNlZUVmLUI4S0E0dkRwc05LZ2lidklEaVNrckhsWndORThQTzViN1B6VmllclprWnBLWThXOERld1MwN3ZpcFV4RC1OcGxMVkhHanhjNEt0ZmU3VGhFWjFGTk56ZWh4U2NGZ25fMHZjcG9OcHRkc09RNXhCQnBrU1VJRWxETU4xSkZ4aGJOLW1pdDA4SXVnR001ME43aE14ZkEyRjhxMkFIMkpMV19FcXNCNnBSX2VYQzBN?oc=5",
+        "publication_date": "2019-05-06",
+        "headline": "Gheorghe Stan, controversatul șef al Secției Speciale, și Cristian Deliorga sunt nominalizați de PSD ca judecători la CCR",
+        "excerpt": ""
+      }
+    ],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 16,
+    "queries": [
+      "Ion Iliescu numirea decret prezidențial ambasadorii trimiși post",
+      "Ion Iliescu prezidențial ambasadorii numirea trimiși"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 17,
+    "queries": [
+      "Ion Iliescu rechemați paisprezece ambasadori",
+      "Ion Iliescu paisprezece ambasadori rechemați"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 18,
+    "queries": [
+      "Ion Iliescu 1 martie 2001 desemnați zece candidați posturile ambasadori",
+      "Ion Iliescu ambasadori desemnați candidați posturile"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  },
+  {
+    "fact_id": 19,
+    "queries": [
+      "Ion Iliescu Printre posturile vizate află posturi capitale cheie",
+      "Ion Iliescu posturile capitale Printre posturi"
+    ],
+    "sources": [],
+    "search_succeeded": true,
+    "search_errors": []
+  }
+]
+
+END article_18_search.json
+codex
+[{"fact_id":1,"summary":"Not Available","source_ids":[]},{"fact_id":2,"summary":"Not Available","source_ids":[]},{"fact_id":3,"summary":"Not Available","source_ids":[]},{"fact_id":4,"summary":"Not Available","source_ids":[]},{"fact_id":5,"summary":"Not Available","source_ids":[]},{"fact_id":6,"summary":"Not Available","source_ids":[]},{"fact_id":7,"summary":"Not Available","source_ids":[]},{"fact_id":8,"summary":"Not Available","source_ids":[]},{"fact_id":9,"summary":"Not Available","source_ids":[]},{"fact_id":10,"summary":"Not Available","source_ids":[]},{"fact_id":11,"summary":"Not Available","source_ids":[]},{"fact_id":12,"summary":"Not Available","source_ids":[]},{"fact_id":13,"summary":"Not Available","source_ids":[]},{"fact_id":14,"summary":"Not Available","source_ids":[]},{"fact_id":15,"summary":"Not Available","source_ids":[]},{"fact_id":16,"summary":"Not Available","source_ids":[]},{"fact_id":17,"summary":"Not Available","source_ids":[]},{"fact_id":18,"summary":"Not Available","source_ids":[]},{"fact_id":19,"summary":"Not Available","source_ids":[]}]
+tokens used
+11,173
+[{"fact_id":1,"summary":"Not Available","source_ids":[]},{"fact_id":2,"summary":"Not Available","source_ids":[]},{"fact_id":3,"summary":"Not Available","source_ids":[]},{"fact_id":4,"summary":"Not Available","source_ids":[]},{"fact_id":5,"summary":"Not Available","source_ids":[]},{"fact_id":6,"summary":"Not Available","source_ids":[]},{"fact_id":7,"summary":"Not Available","source_ids":[]},{"fact_id":8,"summary":"Not Available","source_ids":[]},{"fact_id":9,"summary":"Not Available","source_ids":[]},{"fact_id":10,"summary":"Not Available","source_ids":[]},{"fact_id":11,"summary":"Not Available","source_ids":[]},{"fact_id":12,"summary":"Not Available","source_ids":[]},{"fact_id":13,"summary":"Not Available","source_ids":[]},{"fact_id":14,"summary":"Not Available","source_ids":[]},{"fact_id":15,"summary":"Not Available","source_ids":[]},{"fact_id":16,"summary":"Not Available","source_ids":[]},{"fact_id":17,"summary":"Not Available","source_ids":[]},{"fact_id":18,"summary":"Not Available","source_ids":[]},{"fact_id":19,"summary":"Not Available","source_ids":[]}]

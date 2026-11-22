@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Live viewer for local Codex article logs">
+  <title>Codex logs</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">›_</span><h1>Codex logs</h1></div>
+    <div class="connection"><span class="live-dot"></span><span id="connection" role="status">Connecting</span></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Run selection and message filters">
+      <section class="runs" aria-labelledby="runs-title">
+        <div class="section-heading"><h2 id="runs-title">Article runs</h2><span id="run-count" class="count"></span></div>
+        <nav id="runs" aria-labelledby="runs-title"><p class="sidebar-empty">Looking for runs…</p></nav>
+      </section>
+      <section class="filters" aria-labelledby="filters-title">
+        <div class="section-heading"><h2 id="filters-title">Message types</h2><button id="clear-filters" type="button" hidden>Show all</button></div>
+        <div id="filters"><p class="sidebar-empty">Select a log to filter its messages.</p></div>
+      </section>
+    </aside>
+    <main class="viewer" aria-labelledby="viewer-title">
+      <header class="viewer-heading">
+        <div class="viewer-titles"><p id="viewer-run" hidden></p><h2 id="viewer-title">Log stream</h2></div>
+        <div class="ordering"><span aria-hidden="true">↓</span> Newest first</div>
+      </header>
+      <div id="feed" class="feed">
+        <div class="empty">
+          <p class="empty-title">Looking for article runs</p>
+          <p>The run list refreshes automatically.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
